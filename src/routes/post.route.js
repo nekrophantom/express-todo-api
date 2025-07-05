@@ -1,7 +1,7 @@
 import express from 'express'
-import { createPost, deletePost, getAllPost, getPostById, updatePost } from '../controllers/post.controller'
+import { createPost, deletePost, getAllPost, getPostById, updatePost } from '../controllers/post.controller.js'
 import { validate } from '../middleware/validate'
-import { createPostSchema, paramIdSchema, updatePostSchema } from '../validations/post.validation'
+import { createPostSchema, paramIdSchema, updatePostSchema } from '../validations/post.validation.js'
 
 const router = express.Router()
 
