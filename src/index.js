@@ -1,6 +1,6 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import config from './config/config'
+import config from './config/config.json' assert { type: 'json' }
 import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
