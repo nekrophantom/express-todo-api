@@ -1,0 +1,30 @@
+{
+  "name": "todo-app-api",
+  "module": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot ./src/index.js",
+    "migration:generate": "bunx sequelize-cli migration:generate --migrations-path src/database/migrations --config src/config/sequelize.js --name",
+    "migrate": "bunx sequelize-cli db:migrate --migrations-path src/database/migrations --config src/config/sequelize.js",
+    "migrate:undo": "bunx sequelize-cli db:migrate:undo --migrations-path src/database/migrations --config src/config/sequelize.js",
+    "migrate:undo:all": "bunx sequelize-cli db:migrate:undo:all --migrations-path src/database/migrations --config src/config/sequelize.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "sequelize-cli": "^6.6.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "compression": "^1.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.14.1",
+    "sequelize": "^6.37.7",
+    "zod": "^3.25.67"
+  }
+}
