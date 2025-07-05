@@ -1,6 +1,6 @@
-import { catchAsync } from "../utils/catchAsync";
+import { catchAsync } from "../utils/catchAsync.js";
 import * as PostService from '../services/post.service.js';
-import { successResponse } from "../utils/apiResponse";
+import { successResponse } from "../utils/apiResponse.js";
 
 export const getAllPost = catchAsync(async (req, res) => {
     const posts = await PostService.getAllPost();

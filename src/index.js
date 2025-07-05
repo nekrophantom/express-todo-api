@@ -1,14 +1,14 @@
 import express from 'express'
 import dotenv from 'dotenv'
-import config from './config/config.json' assert { type: 'json' }
+import config from './config/config.json'
 import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
 import compression from 'compression'
 import indexRoutes from "./routes/index.route.js"
-import { ApiError } from './utils/apiError'
+import { ApiError } from './utils/apiError.js'
 import { errorResponse } from './utils/apiResponse'
-import { errorHandler } from './middleware/errorHandler'
+import { errorHandler } from './middleware/errorHandler.js'
 
 dotenv.config()
 
